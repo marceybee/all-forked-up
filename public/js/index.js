@@ -1,4 +1,4 @@
-// ----CODE LOUISVILLE
+// RANDOM RECIPE ----------------------------------
 "use strict"
 
 document.getElementById("getRecipe").addEventListener("click", getRecipe);
@@ -29,17 +29,50 @@ async function getRecipe() {
     }
 }
 
-// getRandomImage();
+// ----------------------------------------
 
-// -----AA
-// document.getElementById("getRecipe").addEventListener("click", getRecipe);
+// SEARCH BAR ------------------------------
+const form = document.getElementById("search-form");
+const input = document.getElementById("search-input");
+const container = document.getElementById("recipes-container");
 
-// async function getRecipe() {
-//     const response = await fetch("/api/recipe");
-//     const data = await response.json();
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-//     document.getElementById("recipe").innerHTML = `
-//         <h2>${data.title}</h2>
-//         <img src="${data.image}" width="300">
-//     `;
-// }
+    const query = input.value;
+    container.innerHTML = "<p>Loading...</p>";
+
+    try {
+        const response = await fetch(`/api/search?query=${query}`);
+        const data = await response.json();
+
+        console.log(data);
+        displayRecipes (data.results || []);
+    } catch (error) {
+        console.error("Error fetching recipes:", error);
+    }
+});
+
+
+function displayRecipes(recipes) {
+    container.innerHTML = "";
+
+    if (!recipes || recipes.length === 0) {
+        container.innerHTML = "<p>No recipes found.</p>";
+        return;
+    }
+
+    recipes.forEach(recipe => {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+        <h3>${recipe.title}</h3>
+        <img src="${recipe.image}" alt="${recipe.title}" />
+        `;
+
+        container.appendChild(div);
+    });
+}
+
+// ------------------------------------
+

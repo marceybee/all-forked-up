@@ -64,15 +64,19 @@ function displayRecipes(recipes) {
 
     recipes.forEach(recipe => {
         const div = document.createElement("div");
+        div.classList.add("recipe-card");
 
         div.innerHTML = `
         <h3>${recipe.title}</h3>
         <img src="${recipe.image}" alt="${recipe.title}" />
         `;
 
+        div.addEventListener("click", () => {
+            window.location.href = `/recipe.html?id=${recipe.id}`;
+        });
+
         container.appendChild(div);
     });
 }
 
 // ------------------------------------
-

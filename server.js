@@ -64,11 +64,25 @@ app.get("/api/search", async (request, response) => {
     const query = request.query.query;
 
     try {
-        const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=2&apiKey=${process.env.SPOONACULAR_KEY}`);
-        const data = await response.json();
+        const fetchResponse = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=2&apiKey=${process.env.SPOONACULAR_KEY}`);
+        const data = await fetchResponse.json();
         response.json(data);
     } catch (error) {
         console.error(error);
     }
 });
 // ------------------------------------
+// GET RECIPES BY ID
+app.get("/api/recipe/:id", async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${process.env.SPOONACULAR_KEY}`);
+        const recipe = await response.json();
+        res.json(recipe);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Failed to fetch recipe details" });
+    }
+});
+// ------------------------------

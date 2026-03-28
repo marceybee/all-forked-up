@@ -1,5 +1,5 @@
-// RANDOM RECIPE ----------------------------------
 "use strict"
+// GET RECIPE ----------------------------------
 
 document.getElementById("getRecipe").addEventListener("click", getRecipe);
 
@@ -9,20 +9,23 @@ async function getRecipe() {
         const response = await fetch(endpoint);
         const data = await response.json();
         
-        document.getElementById("recipe").innerHTML = `
-        <h2>${data.title}</h2>
-        <img src="${data.image}" width="300">
-        <h3>Summary:</h3>
-        <p>${data.summary}</p>
-        <h3>Ingredients:</h3>
-        <ul>
-            ${data.ingredients.map(ing => `<li>${ing.amount} ${ing.unit} ${ing.name}</li>`).join('')}
-        </ul>
-        <h3>Instructions:</h3>
-        <p>${data.instructions}</p>
+        const recipeId = data.id;
+        window.location.href = `/recipe.html?id=${recipeId}`;
+    // RETURNING DATA ON SAME PAGE - NOT USING
+    //     document.getElementById("recipe").innerHTML = `
+    //     <h2>${data.title}</h2>
+    //     <img src="${data.image}" width="300">
+    //     <h3>Summary:</h3>
+    //     <p>${data.summary}</p>
+    //     <h3>Ingredients:</h3>
+    //     <ul>
+    //         ${data.ingredients.map(ing => `<li>${ing.amount} ${ing.unit} ${ing.name}</li>`).join('')}
+    //     </ul>
+    //     <h3>Instructions:</h3>
+    //     <p>${data.instructions}</p>
         
 
-    `;
+    // `;
   
     } catch (error) {
         console.error(error);
@@ -53,7 +56,7 @@ form.addEventListener("submit", async (e) => {
     }
 });
 
-
+// DISPLAY RECIPES -------------------------
 function displayRecipes(recipes) {
     container.innerHTML = "";
 
@@ -80,3 +83,26 @@ function displayRecipes(recipes) {
 }
 
 // ------------------------------------
+// // GET FAVORITES ---------------------
+// function getFavorites() {
+//     return JSON.parse(localStorage.getItem("favorites")) || [];
+// }
+// // SAVE FAVORITES ---------------------
+// function saveFavorite(recipe) {
+//     let favorites = getFavorites();
+
+//     if (!favorites.find(fav => fav.id === recipe.id)) {
+//         favorites.push(recipe);
+//         localStorage.setItem("favorites", JSON.stringify(favorites));
+//     }
+// }
+// // REMOVE FAVORITES
+// function removeFavorite(id) {
+//     let favorites = getFavorites();
+//     favorites = favorites.filter(fav => fav.id !== id);
+//     localStorage.setItem("favorites", JSON.stringify(favorites));
+// }
+// // IS FAVORITE
+// function isFavorite(id) {
+//     return getFavorites().some(fav => fav.id === id);
+// }

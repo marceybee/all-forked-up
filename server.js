@@ -38,6 +38,7 @@ app.get("/api/recipe", async (request, response) => {
         const recipe = await getRecipe();
 
         response.status(200).json({
+            id: recipe.id,
             title: recipe.title,
             image: recipe.image,
             summary: recipe.summary,

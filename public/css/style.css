@@ -14,7 +14,71 @@ body {
     flex: 1;
 }
 
-.background-img {
+nav {
+    background-color: green;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+input[type="text"],
+textarea {
+    field-sizing: content;
+    width: 300px;
+    height: 2rem;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+#searchBtn {
+    padding-left: 1rem;
+}
+
+#getRecipe {
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+
+#recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.recipe-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* .background-img {
     background-image: url("../img/mitchell-luo-FWoq_ldWlNQ-unsplash.jpg");
     background-size: cover;
     position: fixed;
@@ -28,9 +92,9 @@ body {
     opacity: .3;
     z-index: -1;
 
-}
+} */
 
-.quote-container {
+/* .quote-container {
     border: .25rem solid rgb(115, 121, 239);
     width: 90dvw;
     height: 90dvh;
@@ -68,4 +132,4 @@ body {
     margin: 0;
     padding: 0;
     align-self: flex-end;
-}
+} */

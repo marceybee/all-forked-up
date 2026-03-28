@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>All Forked Up</title>
 </head>
 <body>
 
 <!-- NAV BAR -->
 <nav>
-    <a href="/index.html">Home</a>
-    <a href="/favorites.html">View Favorites</a>
+    <a href="/index.html">Home</a> |
+    <a href="/favorites.html">View Favorites</a> |
     <button onclick="history.back()">Go Back</button>
 </nav>
 
 <!-- --------------- -->
+<h1>All Forked Up</h1>
+
+<!-- RANDOM RECIPE BUTTON ------------------- -->
+
+
+<button id="getRecipe">Get Random Recipe</button>
+
+<div id="recipe"></div>
+<!-- ---------------------------- -->
+
 <!-- SEARCH BAR
 ---------------------------- -->
 <form id="search-form">
     <input type="text" id="search-input" placeholder="Search for recipes..." required />
-    <button type="submit">Search</button>
+    <button type="submit" id="searchBtn">Search</button>
 </form>
 
 <div id="recipes-container"></div>
 
 <!-- --------------------------------- -->
  
-<!-- RANDOM RECIPE BUTTON ------------------- -->
-<h1>Random Recipe</h1>
-
-<button id="getRecipe">Get Random Recipe</button>
-
-<div id="recipe"></div>
-<!-- ---------------------------- -->
 <!-- VIEW FAVORITES BUTTON ------------- -->
 
-<a href="/favorites.html">View Favorites</a>
+<!-- <a href="/favorites.html">View Favorites</a> -->
 
 <!-- ------------------------ -->
 <script src="js/favorites.js"></script>

@@ -65,7 +65,7 @@ app.get("/api/search", async (request, response) => {
     const query = request.query.query;
 
     try {
-        const fetchResponse = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=2&apiKey=${process.env.SPOONACULAR_KEY}`);
+        const fetchResponse = await fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=3&apiKey=${process.env.SPOONACULAR_KEY}`);
         const data = await fetchResponse.json();
         response.json(data);
     } catch (error) {

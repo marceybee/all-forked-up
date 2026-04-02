@@ -17,22 +17,26 @@
 </nav>
 
 <!-- --------------- -->
-<h1>All Forked Up</h1>
+<h1>
+    <img src="./img/logo.png" alt="All Forked Up - Recipe Website" id="logo">
+</h1>
 
-<!-- RANDOM RECIPE BUTTON ------------------- -->
 
-
-<button id="getRecipe">Get Random Recipe</button>
-
-<div id="recipe"></div>
-<!-- ---------------------------- -->
 
 <!-- SEARCH BAR
 ---------------------------- -->
 <form id="search-form">
     <input type="text" id="search-input" placeholder="Search for recipes..." required />
-    <button type="submit" id="searchBtn">Search</button>
 </form>
+
+<!-- BUTTONS ------------------- -->
+
+<div id="button-container">
+    <button type="submit" form="search-form" id="searchBtn">Search</button>
+    <button id="getRecipe">Get Random Recipe</button>
+</div>
+<!-- <div id="recipe"></div> -->
+<!-- ---------------------------- -->
 
 <div id="recipes-container"></div>
 

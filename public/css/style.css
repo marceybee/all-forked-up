@@ -27,9 +27,18 @@ h1 {
     text-align: center;
 }
 
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 600px;
+}
+
 #search-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
 }
 
@@ -43,14 +52,27 @@ textarea {
     border-style: solid;
 }
 
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
 #searchBtn {
-    padding-left: 1rem;
+    max-width: 300px;
+    padding: 1rem;
+    background-color: #4DAA57;
+    border-radius: 12px;
+    border: 2px solid #4DAA57;
 }
 
 #getRecipe {
-    display: flex;
-    justify-content: center;
-    background-color: gray;
+    max-width: 300px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+     border: 2px solid #ffbd59;;
 }
 
 #recipes-container, #favorites-container {

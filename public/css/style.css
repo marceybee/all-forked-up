@@ -81,8 +81,7 @@ textarea {
     gap: 20px;
     padding: 20px;
     max-width: 1000px;
-    /* Align-self breaks responsiveness? */
-    /* align-self: center; */
+    margin: 0 auto;
 }
 .recipe-card {
     border-radius: 12px;
@@ -104,7 +103,12 @@ textarea {
 
 .recipe-card h3 {
     font-size: 1rem;
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -125,6 +129,21 @@ textarea {
 #favoriteBtn {
     display: block;
     margin: auto;
+}
+
+@media (max-width: 800px) {
+    #recipes-container, #favorites-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #recipes-container, #favorites-container {
+        grid-template-columns: 1fr;
+    }
+    #logo {
+        width: 80%;
+    }
 }
 
 /* .background-img {

@@ -4,7 +4,8 @@
 document.getElementById("getRecipe").addEventListener("click", getRecipe);
 
 async function getRecipe() {
-    const endpoint = "http://localhost:8080/api/recipe";
+    // const endpoint = "http://localhost:8080/api/recipe";
+    const endpoint = "/api/recipe";
     try {
         const response = await fetch(endpoint);
         const data = await response.json();

@@ -1,10 +1,8 @@
 # all-forked-up
 
-Overview
-A Code:Louisville capstone project using Spoonacular API, demonstrating the use of HTML, JavaScript and Node.js with Express.
+**Overview:** A Code:Louisville capstone project using Spoonacular API, demonstrating the use of HTML, JavaScript and Node.js with Express.
 
-Project Overview
-All Forked Up provides an easy and interactive way for users to find new meals, view detailed cooking instructions, and save their favorite recipes for later - with no ads or unnecessary backstories (i.e., My kids used to hate vegetables until we tried this recipe and now we go to the broccoli farm every day and also my husband loves how easy it is to clean up afterwards and this is my special carrot peeler that my grandma gave me and the funny thing is…). The website focuses on simplicity, responsiveness, and a clean user interface.
+**Project Overview:** All Forked Up provides an easy and interactive way for users to find new meals, view detailed cooking instructions, and save their favorite recipes for later - with no ads or unnecessary backstories (i.e., My kids used to hate vegetables until we tried this recipe and now we go to the broccoli farm every day and also my husband loves how easy it is to clean up afterwards and this is my special carrot peeler that my grandma gave me and the funny thing is…). The website focuses on simplicity, responsiveness, and a clean user interface.
 
 ## Project Organization
 

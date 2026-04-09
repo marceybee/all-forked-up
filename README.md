@@ -4,6 +4,8 @@
 
 **Project Overview:** All Forked Up provides an easy and interactive way for users to find new meals, view detailed cooking instructions, and save their favorite recipes for later - with no ads or unnecessary backstories (i.e., My kids used to hate vegetables until we tried this recipe and now we go to the broccoli farm every day and also my husband loves how easy it is to clean up afterwards and this is my special carrot peeler that my grandma gave me and the funny thing is…). The website focuses on simplicity, responsiveness, and a clean user interface.
 
+**AI Usage Disclaimer:** ChatGPT was used as a supplemental resource for debugging, troubleshooting and exploring alternative solutions during development. The design, implementation and final code were created and reviewed by the developer.
+
 ## Project Organization
 
 **Home Page:** Allows users to search for recipes and view a preview of the recipe(s), including name and picture, before clicking into full details. Also includes a button to generate a random recipe.

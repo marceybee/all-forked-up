@@ -1,4 +1,3 @@
-// AA---------------------
 const container = document.getElementById("favorites-container");
 
 function displayFavorites() {
@@ -30,10 +29,10 @@ function displayFavorites() {
     const removeBtn = div.querySelector(".remove-btn");
 
     removeBtn.addEventListener("click", (e) => {
-        e.stopPropagation(); // prevents navigation
+        e.stopPropagation();
 
         removeFavorite(recipe.id);
-        displayFavorites(); // re-render
+        displayFavorites();
     });
 
     container.appendChild(div);

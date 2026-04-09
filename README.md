@@ -37,8 +37,7 @@ cd all-forked-up
 ```bash
 npm install
 ```
-5. **Set Up Environment Variables**
-Create an `.env` file in the root directory and add:
+5. **Set Up Environment Variables:** Create an `.env` file in the root directory and add:
 ```env
 SPOONACULAR_KEY=your_api_key_here
 ```
@@ -46,8 +45,7 @@ SPOONACULAR_KEY=your_api_key_here
 ```bash
 npm run dev
 ```
-7. **Open the Application**
-Navigate to:
+7. **Open the Application** and navigate to:
 ```bash
 http://localhost:8080
 ```
